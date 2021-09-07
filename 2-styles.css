@@ -1,0 +1,550 @@
+html {
+  font-size: 16px;
+  /** prevents nasty overscroll whitespace */
+  overflow: hidden;
+}
+
+:root {
+  --font-primary: 'Source Sans Pro';
+  --color-primary: #ff6565;
+  --color-grey: #d8d8d8;
+  --color-white: #fff;
+  --color-black: #071629;
+  --elevation-0: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  --elevation-1: 1px 5px 8px 1px rgba(0, 0, 0, 0.25);
+  --elevation-2: 1px 5px 10px 3px rgba(0, 0, 0, 0.25);
+  --btn-overlay: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(6, 6, 6, 0.3) 100%
+  );
+}
+
+body {
+  margin: 0;
+  color: var(--color-white);
+  /** prevents nasty overscroll whitespace */
+  overflow: auto;
+  height: 100vh;
+}
+
+/** allows scalable background image w/ fixed height body */
+#root {
+  height: fit-content;
+  overflow: visible;
+  background-image: url(./images/headphones_hero_1.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/** Sections */
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/** Main */
+.section-main {
+  padding-top: 33vh;
+  color: var(--color-white);
+}
+
+.section-main .section-title {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 0;
+}
+
+.section-main .section-tagline {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.section-main .section-paragraph {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+/** what-we-do */
+.section-what-we-do {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: var(--color-black);
+}
+
+.section-what-we-do .section-paragraph {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  max-width: 400px;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+}
+
+.section-what-we-do .service-badges {
+  max-width: 1200px;
+}
+
+.section-what-we-do .service-badge {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-what-we-do .service-badge-icon {
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.section-what-we-do .service-badge-title {
+  font-size: 1.125rem;
+  font-family: var(--font-primary);
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 0;
+}
+
+.section-what-we-do .service-badge-text {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 0;
+  width: fit-content;
+  max-width: 60%;
+  align-self: center;
+}
+
+/** Section our results */
+.section-our-results {
+  background-image: url(./images/headphones_hero_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 2rem;
+}
+
+.section-our-results .container-full {
+  align-self: flex-start;
+}
+
+.container-full .row {
+  width: 100%;
+}
+
+.section-our-results .section-paragraph {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+}
+
+.section-our-results .result-stat {
+  background-image: url(./images/pentagone.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 190px;
+  height: 190px;
+  margin: 1rem;
+}
+
+.section-our-results .result-stat-value {
+  font-family: var(--font-primary);
+  font-size: 2.875rem;
+  font-weight: 700;
+  line-height: 26px;
+  padding-top: 3.5rem;
+  margin: 0;
+  margin-bottom: 0.875rem;
+}
+
+.section-our-results .result-stat-label {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/** Buttons */
+.btn {
+  border-radius: 1.375rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  border: none;
+  min-width: 162px;
+  min-height: 44px;
+  background: transparent;
+  box-shadow: var(--elevation-0);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  box-shadow: var(--elevation-1);
+  background: var(--btn-overlay);
+}
+
+.btn-primary,
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/** Header */
+.header {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.header .header-logo {
+  width: fit-content;
+}
+
+.mobile-nav-icon .navicon {
+  background: var(--color-white);
+  display: block;
+  width: 0.813rem;
+  height: 0.125rem;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.mobile-nav-icon .navicon::after {
+  content: '';
+  display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  position: absolute;
+  background: var(--color-white);
+  transition: all 0.2s ease-out;
+  top: 0.5rem;
+}
+
+.mobile-nav-icon .navicon::before {
+  content: '';
+  display: block;
+  width: 1.125rem;
+  height: 0.125rem;
+  position: absolute;
+  background: var(--color-white);
+  transition: all 0.2s ease-out;
+  top: -0.5rem;
+}
+
+.mobile-nav-btn:checked ~ .navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mobile-nav-btn:checked ~ .navbar-menu .nav {
+  max-height: 100%;
+  overflow: inherit;
+}
+
+.mobile-nav-btn:checked + .mobile-nav-icon .navicon {
+  background: transparent;
+}
+
+.mobile-nav-btn:checked + .mobile-nav-icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.mobile-nav-btn:checked + .mobile-nav-icon .navicon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-menu .nav .nav-item {
+  display: block;
+  flex: 0 1 auto;
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar-menu .nav .nav-item .nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.navbar-menu .nav .nav-item .nav-link:hover {
+  color: var(--color-primary);
+}
+
+/** Mobile nav btn */
+.mobile-nav-btn {
+  display: none;
+}
+
+/** Layout classes inspired by Bootstrap */
+.container-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.col-flex {
+  display: flex;
+}
+
+/** Cols */
+[class^='col-'] {
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-flex {
+  display: flex;
+}
+
+/* Responsive - sm (Mobile) */
+@media (min-width: 0px) {
+  /** mobile nav */
+  .navbar-menu .nav {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar-menu .nav .nav-item:not(:last-child) {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .mobile-nav-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    user-select: none;
+  }
+
+  /** sm cols */
+  .col-sm-1 {
+    width: 8.33333333%;
+  }
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+  .col-sm-hidden {
+    display: none;
+  }
+}
+
+/* Responsive - md (Tablet) */
+@media (min-width: 481px) {
+  .section .section-tagline {
+    margin: 0 0 40px 0;
+  }
+  .navbar-menu .nav .nav-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .navbar-menu .nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 255px;
+  }
+  .mobile-nav-icon {
+    display: none;
+  }
+  .navbar-menu {
+    display: flex;
+    justify-content: center;
+  }
+  .header .header-logo {
+    text-align: left;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-hidden {
+    display: none;
+  }
+}
+
+/* Responsive - lg (Desktop) */
+@media (min-width: 769px) {
+  .col-lg-1 {
+    width: 8.33333333%;
+  }
+  .col-lg-2 {
+    width: 16.66666667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33333333%;
+  }
+  .col-lg-5 {
+    width: 41.66666667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33333333%;
+  }
+  .col-lg-8 {
+    width: 66.66666667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.33333333%;
+  }
+  .col-lg-11 {
+    width: 91.66666667%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-hidden {
+    display: none;
+  }
+}
